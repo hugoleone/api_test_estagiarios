@@ -1,16 +1,12 @@
 const mongoose = require('mongoose');
 
 //Campos que devem ser salvos no Banco de Dados para cada produto.
-const ProductSchema = new mongoose.Schema({
-    title:{
+const EstagiarioSchema = new mongoose.Schema({
+    matricula:{
         type: String,
         required: true,
     },
-    description:{
-        type: String,
-        required: true,
-    },
-    url:{
+    orgaoLotado:{
         type: String,
         required: true,
     },
@@ -21,4 +17,4 @@ const ProductSchema = new mongoose.Schema({
 });
 
 //Registrar Model na aplicação.
-mongoose.model('Product', ProductSchema);
+mongoose.model('Estagiario', EstagiarioSchema);
